@@ -107,7 +107,7 @@ class  Pop30View(View):
         pop30 = Poporder.objects.filter(pop30=pop.id).values(
             'song__name',
             'song__image',
-            'song__youtube','song__album__artist'
+            'song__youtube','song__album__name'
         )
         p3 = Pop30Info()
         html = p3.get_html()
