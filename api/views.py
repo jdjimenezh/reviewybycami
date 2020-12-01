@@ -135,16 +135,16 @@ class  Pop30View(View):
             htmlpop += '<tr >'
             htmlpop += '<td style="width: 35%;"  rowspan="4">'
             htmlpop += '<img src="{}/{}" width="100" height="100"></td>'.format(settings.MEDIA_URL,pop30[x]['song__image'])
-            htmlpop += '<td style="width: 65%; height: 33%;"><b>Cancion: </b>{}</td>'.format(pop30[x]['song__name'])
+            htmlpop += '<td style="width: 65%; height: 33%;"><b>Cancion:</b>{}</td>'.format(pop30[x]['song__name'])
             htmlpop += '</tr>'
             htmlpop += '<tr >'
-            htmlpop += '<td style="width: 65%; height: 33%;"><b>Album: </b>{}</td>'.format(pop30[x]['song__album__name'])
+            htmlpop += '<td style="width: 65%; height: 33%;"><b>Album:</b>{}</td>'.format(pop30[x]['song__album__name'])
             htmlpop += '</tr>'
             htmlpop += '<tr>'
-            htmlpop += '<td style="width: 65%; height: 33%;"><b>Disquera: </b>{}</td>'.format(pop30[x]['song__record_company'])
+            htmlpop += '<td style="width: 65%; height: 33%;"><b>Disquera:</b>{}</td>'.format(pop30[x]['song__record_company'])
             htmlpop += '</tr>'
             htmlpop += '<tr>'
-            htmlpop += '<td style="width: 50%; height: 33%;"><a href="{}"/><b>Youtube: </b>{}</td>'.format(pop30[x]['song__youtube'],pop30[x]['song__youtube'])
+            htmlpop += '<td style="width: 50%; height: 33%;"><a href="{}"/><b>Youtube:</b>{}</td>'.format(pop30[x]['song__youtube'],pop30[x]['song__youtube'])
             htmlpop += '</tr>'
         #     else:
         #         htmlpop += '<tr>'
