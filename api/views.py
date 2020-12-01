@@ -85,6 +85,7 @@ class NewsView(View):
 
         return render(self.request, 'news.html', context)
 
+
 class ArticleView(View):
     def get(self, *args, **kwargs):
         p = Publication.objects.filter(category='opinion').all()
@@ -100,6 +101,22 @@ class ArticleView(View):
         }
 
         return render(self.request, 'news.html', context)
+
+class EventView(View):
+    def get(self, *args, **kwargs):
+        p = Publication.objects.filter(category='event').all()
+        pop = Pop30.objects.latest('created_at')
+        p3 = Pop30Info()
+        html = p3.get_html()
+        lastvideo = Pop30.objects.order_by('-created_at').first()
+
+        context = {
+            'object': p,
+            'html': html,
+            'lastvideo':lastvideo.youtube
+        }
+
+        return render(self.request, 'events.html', context)
 
 class  Pop30View(View):
     def get(self, *args, **kwargs):

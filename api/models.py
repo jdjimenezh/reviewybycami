@@ -9,7 +9,7 @@ from django.utils.html import mark_safe
 category = [
     ('album', 'Album'),
     ('news', 'Noticia'),
-    ('opinion', 'Opinion'),
+    ('opinion', 'Articulo'),
     ('event', 'Evento'),
     ('song', 'Cancion'),
     ]
