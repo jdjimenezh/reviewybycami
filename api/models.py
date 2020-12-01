@@ -24,7 +24,7 @@ class BaseMeta(models.Model):
 
 class Publication(BaseMeta):
     title = models.CharField(max_length=255, null=False)
-    content = models.CharField(max_length=2000, null=False)
+    content = models.CharField(max_length=5000, null=False)
     image = models.ImageField()
     category = models.CharField(max_length=255,choices=category)
     def image_tag(self):
@@ -50,6 +50,7 @@ class Album(BaseMeta):
     artist = models.ForeignKey(Artist, blank=True, null=True, on_delete=models.SET_NULL)
     spotify = models.CharField(max_length=2000, null=True)
     image = models.ImageField()
+    record_company = models.CharField(max_length=255, null=True)
 
     def image_tag(self):
         return mark_safe('<img src="/media/%s" width="150" height="150" />' % (self.image))
@@ -65,6 +66,7 @@ class Song(BaseMeta):
     spotify = models.CharField(max_length=2000, null=True)
     youtube = models.CharField(max_length=2000, null=True)
     image = models.ImageField()
+    record_company = models.CharField(max_length=255, null=True)
 
     def image_tag(self):
         return mark_safe('<img src="/media/%s" width="150" height="150" />' % (self.image))

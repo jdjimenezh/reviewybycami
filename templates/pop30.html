@@ -7,7 +7,6 @@
 <title>Reviewybycami</title>
 
 
-<link rel="stylesheet" href="{% static 'css/reset.css' %}" type="text/css" />
 <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css" />
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -117,17 +116,18 @@ License: Creative Commons Attribution
 		<section id="content" class="three-column">
 
 		<article class="expanded">
-            <table>
-            {% for item in object %}
-            <tr>
-                <td colspan="3"><img alt="" src="{{ MEDIA_URL }}/{{ item.song__image }}" width="200" height="200"></td>
-                <td>{{ item.song__name }}</td>
-                <td>{{ item.song__album__name }}</td>
-                <td><a  style="font-size: 10px" target="_blank" href="{{ item.song__youtube }}">{{ item.song__youtube }}</a></td>
-
-            </tr>
-            {% endfor %}
-        </table>
+             {{ htmlpop|safe }}
+{#            <table>#}
+{#            {% for item in object %}#}
+{#            <tr>#}
+{#                <td colspan="3"><img alt="" src="{{ MEDIA_URL }}/{{ item.song__image }}" width="200" height="200"></td>#}
+{#                <td>{{ item.song__name }}</td>#}
+{#                <td>{{ item.song__album__name }}</td>#}
+{#                <td><a  style="font-size: 10px" target="_blank" href="{{ item.song__youtube }}">{{ item.song__youtube }}</a></td>#}
+{##}
+{#            </tr>#}
+{#            {% endfor %}#}
+{#        </table>#}
 		</article>
 
         </section>

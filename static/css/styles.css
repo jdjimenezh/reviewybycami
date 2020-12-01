@@ -70,8 +70,8 @@ a {
 }
 
 a:hover {
-	border-bottom-color: #5FC000;
-	color: #5FC000;
+	border-bottom-color: #00CA00;
+	color: #00CA00;
 }
 
 a:focus {
@@ -79,7 +79,7 @@ a:focus {
 }
 
 
-a.button { background: #5FC000;
+a.button { background: #00CA00;
 color: #FFF;
 display: inline-block;
 
@@ -139,7 +139,7 @@ form input, form select, form textarea {
 }
 
 form input.formbutton {
-background: none repeat scroll 0% 0% #5FC000;
+background: none repeat scroll 0% 0% #00CA00;
 color: #FFF;
 display: inline-block;
 
@@ -189,7 +189,7 @@ margin: 0px;
 }
 
 h3 {
-	color: #5FC000;
+	color: #00CA00;
 	font-size: 1.9em;
 	font-weight: 600;
 	margin-bottom: 10px;
@@ -560,7 +560,7 @@ article .article-info a {
 
 
 .sidebar ul li.bg, .sidebar ul li.bg li, .sidebar ul li.bg h4, .sidebar ul li.bg a, .sidebar ul li.bg a:hover {
-	background-color: #5FC000;
+	background-color: #00CA00;
 	color: #fff;
 }
 .sidebar ul li.bg a, .sidebar ul li.bg a:hover {
@@ -629,7 +629,7 @@ article .article-info a {
 
 .sidebar ul.blocklist li a.selected,
 .sidebar ul.blocklist li a.selected:hover {
-	background:#5FC000;
+	background:#00CA00;
 	border-bottom: 1px solid #051040;
     color: #FFFFFF;
 	font-weight: bold;
@@ -662,7 +662,7 @@ article .article-info a {
 }
 
 .sidebar ul.newslist span.newslist-date { 
-	background-color: #5FC000;
+	background-color: #00CA00;
 	color: #fff;
 	padding: 5px 10px;
 }
