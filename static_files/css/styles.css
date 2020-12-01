@@ -61,6 +61,7 @@ blockquote p {
 p {
 	line-height: 1.7em;
 	margin-bottom: 25px;
+	text-align: justify !important;
 }
 
 a {
@@ -831,4 +832,7 @@ div.social-icons a {
 	.sf-menu li:hover ul, .sf-menu li.sfHover ul { top: 0; }
 
 
+}
+.expanded p{
+	text-align: justify !important;
 }
