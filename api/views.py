@@ -12,8 +12,8 @@ class Pop30Info():
 
         for x in range(0, 5, 2):
             if x == 0:
-                html += '<tr>'
-                html += '<td colspan="2" style="align:center"><img alt="" src="{}/{}" width="130" height="130"></td>'.format(
+                html += '<tr >'
+                html += '<td colspan="2" style="text-align:center !important" ><img alt="" src="{}/{}" width="130" height="130"></td>'.format(
                     settings.MEDIA_URL,
                     pop30[x]['song__image'])
                 html += '</tr>'
@@ -133,18 +133,18 @@ class  Pop30View(View):
         for x in range(0, len(pop30)):
 
             htmlpop += '<tr >'
-            htmlpop += '<td style="width: 50%;"  rowspan="4">'
+            htmlpop += '<td style="width: 35%;"  rowspan="4">'
             htmlpop += '<img src="{}/{}" width="100" height="100"></td>'.format(settings.MEDIA_URL,pop30[x]['song__image'])
-            htmlpop += '<td style="width: 50%; height: 33%;">{}</td>'.format(pop30[x]['song__name'])
+            htmlpop += '<td style="width: 65%; height: 33%;"><b>Cancion: </b>{}</td>'.format(pop30[x]['song__name'])
             htmlpop += '</tr>'
             htmlpop += '<tr >'
-            htmlpop += '<td style="width: 50%; height: 33%;">{}</td>'.format(pop30[x]['song__album__name'])
+            htmlpop += '<td style="width: 65%; height: 33%;"><b>Album: </b>{}</td>'.format(pop30[x]['song__album__name'])
             htmlpop += '</tr>'
             htmlpop += '<tr>'
-            htmlpop += '<td style="width: 50%; height: 33%;">{}</td>'.format(pop30[x]['song__record_company'])
+            htmlpop += '<td style="width: 65%; height: 33%;"><b>Disquera: </b>{}</td>'.format(pop30[x]['song__record_company'])
             htmlpop += '</tr>'
             htmlpop += '<tr>'
-            htmlpop += '<td style="width: 50%; height: 33%;"><a href="{}"/>{}</td>'.format(pop30[x]['song__youtube'],pop30[x]['song__youtube'])
+            htmlpop += '<td style="width: 50%; height: 33%;"><a href="{}"/><b>Youtube: </b>{}</td>'.format(pop30[x]['song__youtube'],pop30[x]['song__youtube'])
             htmlpop += '</tr>'
         #     else:
         #         htmlpop += '<tr>'
